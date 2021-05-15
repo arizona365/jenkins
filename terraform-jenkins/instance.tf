@@ -21,6 +21,7 @@ resource "aws_instance" "web" {
                   sudo usermod -a -G docker ec2-user
                   sudo usermod -a -G docker jenkins
                   sudo usermod -a -G wheel jenkins
+                  sudo chmod 666 /var/run/docker.sock
                   sudo echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
                   sudo yum install git -y
                   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

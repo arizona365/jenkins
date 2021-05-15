@@ -7,6 +7,7 @@
 4. Good practices - do's and don'ts.
 5. Jenkinsfile - what is it for?.
 
+???????? - just a sample
 ### What is Continuous Integration?
 ![Continuous integration](assets/continious-integration.png)
 
