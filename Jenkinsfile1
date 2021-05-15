@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    environment{
+        RELEASE='20.04'
+    }
+    stages {
+        stage('Build') {
+            
+            steps {
+                echo "Building release  ${RELEASE} ... ${BUILD_NUMBER}.... ${WORKSPACE}"
+            }
+        }
+        
+         stage('Test') {
+            steps {
+                echo "Testing. I can see  ${RELEASE}"
+                writeFile file: 'test-results.txt' , text: 'passed'
+            }
+        }
+    }
+   
+}

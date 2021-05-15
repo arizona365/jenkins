@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('Git Checkout') {
+            steps {
+                
+                git credentialsId: 'gitCredential', url: 'https://github.com/mcalik77/terraform_codingBook.git'
+
+                }
+            }
+        
+       
+    }
+}
